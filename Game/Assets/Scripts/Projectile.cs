@@ -8,12 +8,17 @@ public class Projectile : MonoBehaviour
 
     private Rigidbody2D _rigidbody;
 
-    void Start()
+    void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
     }
 
     void Update()
+    {
+        
+    }
+
+    public void Shoot()
     {
         _rigidbody.velocity = new Vector2(_speed, 0f);
     }
